@@ -1,4 +1,6 @@
+#language: tr
+Özellik: PEYK Uygulaması
 Feature: my feature
 
-  Scenario: new scenario
-    When peyk bordro
+  Senaryo: PEYK'in temel fonksiyonlarını test etmek
+    Eğer ki : Ücret Bordrosu özelliğini test etmek isterseniz
