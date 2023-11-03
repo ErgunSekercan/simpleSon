@@ -37,6 +37,9 @@ public class PEYK_Pages {
     @FindBy(xpath = "//label[contains(text(), \"Bordro Gönder\")]")
     public WebElement bordroGonder;
 
+    @FindBy(xpath = "//h4")
+    public WebElement ucretBordrosuYuk;
+
     @FindBy(xpath = "//span[contains(text(), \" Ücret Bordrosu Yükle \")]")
     public WebElement ucretBordrosuYukle;
 
