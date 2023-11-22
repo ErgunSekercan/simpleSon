@@ -304,6 +304,37 @@ public class PeykJenkins extends Driver {
         String formGon = peyk_pages.formGon.getText();
         Assert.assertEquals(formGon,"Form Gönder");
         BrowserUtils.waitFor(2);
+        peyk_pages.sec.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.calisanSecimi.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.aliVeli.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.kaydet.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.onayla.click();
+        BrowserUtils.waitFor(3);
+        peyk_pages.imzalaGonder.click();
+        BrowserUtils.waitFor(1);
+        try {
+            String pin = peyk_pages.pin.getText();
+            BrowserUtils.waitFor(2);
+
+            if (pin.contains("P")) {
+                peyk_pages.eImzaPassword.click();
+                peyk_pages.eImzaPassword.sendKeys("3944");
+                BrowserUtils.waitFor(2);
+            }
+        }catch (Exception e){
+            System.out.println("E-imza bulunmamaktadır!");
+        }
+
+        peyk_pages.imzala.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(5);
+        Assert.assertEquals(peyk_pages.pdfGonderiliyor.getText(),"PDF imzalandı ve gönderiliyor");
+        BrowserUtils.waitFor(2);
 
         peyk_pages.formIslemleri.click();
         BrowserUtils.waitFor(2);

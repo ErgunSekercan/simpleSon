@@ -116,8 +116,28 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(), \"Form Gönder\")]")
     public WebElement formGon;
 
+
+
     @FindBy(xpath = "//span[contains(text(), \" Form İşlemleri\")]")
     public WebElement formIslemleri;
+
+    @FindBy(xpath = "//label[contains(text(),'Lütfen çalışan seçimi yapınız.')]")
+    public WebElement calisanSecimi;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[13]")
+    public WebElement aliVeli;
+
+    @FindBy(xpath = "//button[contains(text(),'Kaydet')]")
+    public WebElement kaydet;
+
+    @FindBy(xpath = "//button[contains(text(),'Onayla')]")
+    public WebElement onayla;
+
+    @FindBy(xpath = "(//button[contains(text(),'Seç')])[5]")
+    public WebElement sec;
+
+    @FindBy(xpath = "//span[contains(text(),'PDF imzalandı ve gönderiliyor')]")
+    public WebElement pdfGonderiliyor;
 
     @FindBy(xpath = "//button[@label='Toplu Form Gönder']")
     public WebElement topluFormGonder;
